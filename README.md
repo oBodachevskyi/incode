@@ -42,7 +42,10 @@ $ npm run db:create src/migrations/[MigrationName]
 
 #use created migration 
 $ npm run db:migrate
+```
 
+## Postman collection
+[Postman for testing](https://winter-meadow-119738.postman.co/workspace/My-Workspace~5283901a-ddae-43ff-85bf-f18c69ab8e84/collection/21293932-437e3228-7587-43b2-ae65-ae75e2de030f?action=share&creator=21293932)
 
 
 

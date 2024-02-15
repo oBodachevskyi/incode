@@ -63,7 +63,11 @@ export class UserService {
 
     const newUser = new UserEntity();
     Object.assign(newUser, createUserDto);
-    return await this.userRepository.save(newUser);
+    try {
+      return await this.userRepository.save(newUser);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   async login(loginUserDto: LoginUserDto): Promise<UserEntity> {
@@ -133,7 +137,11 @@ export class UserService {
     }
 
     user.boss = newBoss;
-    return await this.userRepository.save(user);
+    try {
+      return await this.userRepository.save(user);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   generateJwt(user: UserEntity): string {
